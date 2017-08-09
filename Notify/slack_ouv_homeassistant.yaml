@@ -1,0 +1,4 @@
+name: slack_ouv_homeassistant
+platform: slack
+api_key: !secret slack_ouv_homeassistant
+default_channel: '#homeassistant' 

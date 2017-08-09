@@ -1,0 +1,4 @@
+name: slack_ouv_arduino
+platform: slack
+api_key: !secret slack_ouv_arduino
+default_channel: '#arduino' 

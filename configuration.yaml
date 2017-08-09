@@ -143,5 +143,5 @@ input_select:
     initial: Enable
     icon: mdi:camera
  
-notify: !include_dir_merge_list Notify 
+notify: !include_dir_list Notify/
     
