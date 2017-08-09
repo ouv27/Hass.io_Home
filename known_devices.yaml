@@ -1,0 +1,17 @@
+iphone_de_sylvain:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iphone de sylvain
+  picture:
+  track: true
+  vendor:
+
+iphone_de_estelle:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iphone de estelle
+  picture:
+  track: true
+  vendor:

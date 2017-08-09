@@ -1,0 +1,41 @@
+# Draveil
+- name: Home
+  latitude: !secret Draveil_latitude
+  longitude: !secret Draveil_longitude
+  radius: 50  
+  icon: mdi:home
+  
+# Ecole
+- name: School
+  latitude: !secret School_latitude
+  longitude: !secret School_longitude
+  radius: 100  
+  icon: mdi:school
+    
+# Evry
+- name: WorkEvry
+  latitude: !secret Evry_latitude
+  longitude: !secret Evry_longitude 
+  radius: 150
+  icon: mdi:worker
+  
+# Issy
+- name: WorkIssy
+  latitude: !secret Issy_latitude
+  longitude: !secret Issy_longitude
+  radius: 50  
+  icon: mdi:worker
+  
+# Monthureux
+- name: Monthureux
+  latitude: !secret Monthureux_latitude
+  longitude: !secret Monthureux_longitude
+  radius: 50  
+  icon: mdi:home
+  
+# Longpont
+- name: Longpont
+  latitude: !secret Longpont_latitude
+  longitude: !secret Longpont_longitude
+  radius: 50  
+  icon: mdi:home

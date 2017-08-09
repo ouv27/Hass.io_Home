@@ -1,0 +1,88 @@
+default_view:
+  view: true
+  name: Maison
+  icon: mdi:home
+  entities:
+  - device_tracker.iphone_de_sylvain
+  - device_tracker.iphone_de_estelle
+  - sensor.yr_temperature
+  - sensor.yr_humidity
+  - sensor.yr_precipitation
+  - cover.volet_bureau
+  - cover.volet_chambre
+  - cover.volet_cuisine
+  - cover.volet_salon
+  - cover.volet_sam
+  - cover.prise_sam
+  - switch.lumiere_chambre
+  - switch.lumiere_salon
+  - switch.lumiere_cuisine1
+  - switch.lumiere_cuisine2
+
+Weather:
+  name: Weather
+  entities:
+  - sensor.yr_cloudiness
+  - sensor.yr_dewpoint_temperature
+  - sensor.yr_fog
+  - sensor.yr_high_clouds
+  - sensor.yr_medium_clouds
+  - sensor.yr_low_clouds
+  - sensor.yr_pressure
+  - sensor.yr_wind_speed
+  - sensor.yr_wind_direction
+OutSide:
+  view: true
+  name: "Ext\xE9rieur"
+  entities:
+  - group.Weather
+  - camera.back
+  - camera.front
+  - sensor.arlo_cameras
+  - sensor.captured_today_front
+  - sensor.captured_today_back
+  - sensor.last_back
+  - sensor.last_front
+Tracker:
+  view: true
+  name: Tracker
+  entities:
+  - device_tracker.iphone_de_sylvain
+  - device_tracker.iphone_de_estelle  
+Sensors:
+  name: Sensors
+  view: true
+  entities:
+  - sun.sun
+  - group.SMO_MySensors_DS18B20_1
+  - group.LocalMachine
+SMO_MySensors_DS18B20_1:
+  name: SMO_MySensors_DS18B20_1
+  entities:
+  - sensor.MySensorsBatterie
+  - sensor.MySensorsTemp
+LocalMachine:
+  name: LocalMachine
+  entities:
+  - sensor.CPU
+  - sensor.cpu_use
+  - sensor.ram_use
+  - sensor.disk_use_c
+Tests:
+  name: Tests
+  view: true
+  entities:
+  - input_select.threat
+  - input_select.who_cooks
+  - input_select.living_room_preset
+  - input_boolean.notify_home
+  - input_slider.bedroom_brightness
+  - input_select.arlo_mode
+Demo:
+  name: Features Available
+  view: true
+  entities:
+  - automation.try_pushbullet_notification
+  - automation.try_slackouvarduino_notification
+  - automation.try_slackouvhomeassistant_notification
+  - automation.send_slack_notification_every_one_minute
