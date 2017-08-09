@@ -82,7 +82,10 @@ Demo:
   name: Features Available
   view: true
   entities:
-  - automation.try_pushbullet_notification
-  - automation.try_slackouvarduino_notification
-  - automation.try_slackouvhomeassistant_notification
-  - automation.send_slack_notification_every_one_minute
+  - automation.Homeassistant_Start
+  - automation.Homeassistant_Stop
+  - automation.Homeassistant_Alive
+  - automation.Sylvain_at_home
+  - automation.Sylvain_leave_home
+  - automation.Estelle_at_home
+  - automation.Estelle_leave_home

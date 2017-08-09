@@ -1,1 +1,118 @@
-[]
+######################
+# Example automation #
+######################
+- id: change_theme
+  alias: "Change Theme"
+  initial_state: 'on'
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: frontend.set_theme
+      data:
+        name: happy
+#######################
+# Homeassistant_Start #
+# SMO : OK            #
+#######################
+- id: Homeassistant_Start
+  alias: "Homeassistant Start"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Start"
+######################
+# Homeassistant_Stop #
+# SMO : OK           #
+######################
+- id: Homeassistant_Stop
+  alias: "Homeassistant Stop"
+  trigger:
+    platform: homeassistant
+    event: shutdown
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Stop"
+#######################
+# Homeassistant_Alive #
+# SMO : OK            #
+#######################
+- id: Homeassistant_Alive
+  alias: "Homeassistant Alive"
+  trigger:
+    platform: time
+    hours: '/1' #This will match every 1 hour
+    minutes: 00
+    seconds: 00
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Alive every hour"
+#######################
+# Sylvain at home     #
+# SMO : en cours      #
+#######################
+- id: Sylvain_at_home
+  alias: "Sylvain at home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_sylvain
+    zone: zone.home
+    # Event is either enter or leave
+    event: enter
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Sylvain at home"
+#######################
+# Sylvain leave home  #
+# SMO : en cours      #
+#######################
+- id: Sylvain_leave_home
+  alias: "Sylvain leave home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_sylvain
+    zone: zone.home
+    # Event is either enter or leave
+    event: leave
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Sylvain leave home"
+#######################
+# Estelle at home     #
+# SMO : en cours      #
+#######################
+- id: Estelle_at_home
+  alias: "Estelle at home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_estelle
+    zone: zone.home
+    # Event is either enter or leave
+    event: enter
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Estelle at home"
+#######################
+# Estelle leave home  #
+# SMO : en cours      #
+#######################
+- id: Estelle_leave_home
+  alias: "Estelle leave home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_estelle
+    zone: zone.home
+    # Event is either enter or leave
+    event: leave
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Estelle leave home"
