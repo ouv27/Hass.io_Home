@@ -78,14 +78,34 @@ Tests:
   - input_boolean.notify_home
   - input_slider.bedroom_brightness
   - input_select.arlo_mode
-Demo:
-  name: Features Available
+
+# BasicAutomations
+iphone_de_sylvainAutomations:
+  view: false
+  entities:
+  - automation.1_Sylvain_at_home
+  - automation.2_Sylvain_leave_home   
+iphone_de_estelleAutomations:
+  view: false
+  entities:
+  - automation.3_Estelle_at_home
+  - automation.4_Estelle_leave_home   
+homeassistantAutomations:
+  view: false
+  entities:
+  - automation.5_Homeassistant_Start
+  - automation.6_Homeassistant_Stop 
+  - automation.7_Homeassistant_Alive  
+  
+BasicAutomations:
+  name: Basic automations
   view: true
   entities:
+  - group.iphone_de_sylvainAutomations
+  - group.iphone_de_estelleAutomations
+  - group.homeassistantAutomations
   - automation.Homeassistant_Start
   - automation.Homeassistant_Stop
   - automation.Homeassistant_Alive
-  - automation.Sylvain_at_home
-  - automation.Sylvain_leave_home
   - automation.Estelle_at_home
   - automation.Estelle_leave_home

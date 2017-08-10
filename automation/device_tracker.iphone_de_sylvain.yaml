@@ -1,0 +1,32 @@
+#######################
+# Sylvain at home     #
+# SMO : en cours      #
+#######################
+- id: 1_Sylvain_at_home
+  alias: "1 Sylvain at home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_sylvain
+    zone: zone.home
+    # Event is either enter or leave
+    event: enter
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Sylvain at home"
+#######################
+# Sylvain leave home  #
+# SMO : en cours      #
+#######################
+- id: 2_Sylvain_leave_home
+  alias: "2 Sylvain leave home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_sylvain
+    zone: zone.home
+    # Event is either enter or leave
+    event: leave
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Sylvain leave home"

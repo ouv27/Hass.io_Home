@@ -1,0 +1,32 @@
+#######################
+# Estelle at home     #
+# SMO : en cours      #
+#######################
+- id: 3_Estelle_at_home
+  alias: "3 Estelle at home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_estelle
+    zone: zone.home
+    # Event is either enter or leave
+    event: enter
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Estelle at home"
+#######################
+# Estelle leave home  #
+# SMO : en cours      #
+#######################
+- id: 4_Estelle_leave_home
+  alias: "4 Estelle leave home"
+  trigger:
+    platform: zone
+    entity_id: device_tracker.iphone_de_estelle
+    zone: zone.home
+    # Event is either enter or leave
+    event: leave
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Estelle leave home"

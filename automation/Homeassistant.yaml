@@ -1,0 +1,42 @@
+#######################
+# Homeassistant_Start #
+# SMO : OK            #
+#######################
+- id: 5_Homeassistant_Start
+  alias: "5 Homeassistant Start"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Start"
+######################
+# Homeassistant_Stop #
+# SMO : OK           #
+######################
+- id: 6_Homeassistant_Stop
+  alias: "6 Homeassistant Stop"
+  trigger:
+    platform: homeassistant
+    event: shutdown
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Stop"
+#######################
+# Homeassistant_Alive #
+# SMO : OK            #
+#######################
+- id: 7_Homeassistant_Alive
+  alias: "7 Homeassistant Alive"
+  trigger:
+    platform: time
+    hours: '/1' #This will match every 1 hour
+    minutes: 00
+    seconds: 00
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "Notification : Homeassistant Alive every hour"
+
