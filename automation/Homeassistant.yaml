@@ -10,7 +10,7 @@
   action:
     - service: notify.slack_ouv_homeassistant
       data:
-        message: "Notification : Homeassistant Start"
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Homeassistant Start"
 ######################
 # Homeassistant_Stop #
 # SMO : OK           #
@@ -23,7 +23,7 @@
   action:
     - service: notify.slack_ouv_homeassistant
       data:
-        message: "Notification : Homeassistant Stop"
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Homeassistant Stop"
 #######################
 # Homeassistant_Alive #
 # SMO : OK            #
@@ -38,5 +38,5 @@
   action:
     - service: notify.slack_ouv_homeassistant
       data:
-        message: "Notification : Homeassistant Alive every hour"
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Homeassistant Alive every hour"
 

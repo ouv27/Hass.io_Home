@@ -13,7 +13,7 @@
   action:
     - service: notify.slack_ouv_homeassistant
       data:
-        message: "Notification : Sylvain at home"
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Sylvain at home"
 #######################
 # Sylvain leave home  #
 # SMO : en cours      #
@@ -29,4 +29,4 @@
   action:
     - service: notify.slack_ouv_homeassistant
       data:
-        message: "Notification : Sylvain leave home"
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Sylvain leave home"
