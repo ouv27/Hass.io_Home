@@ -1,0 +1,27 @@
+############
+# 8_SunSet #
+# SMO : en cours #
+############
+- id: 8_SunSet
+  alias: "8 SunSet"
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : SunSet"
+#############
+# 9_SunRise #
+# SMO : en cours #
+#############
+- id: 9_SunRise
+  alias: "9 SunRise"
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : SunRise"
+

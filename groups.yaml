@@ -96,7 +96,11 @@ homeassistantAutomations:
   - automation.5_Homeassistant_Start
   - automation.6_Homeassistant_Stop 
   - automation.7_Homeassistant_Alive  
-  
+sunAutomations:
+  view: false
+  entities:  
+  - automation.8_SunSet
+  - automation.9_SunRise
 BasicAutomations:
   name: Basic automations
   view: true
@@ -104,8 +108,4 @@ BasicAutomations:
   - group.iphone_de_sylvainAutomations
   - group.iphone_de_estelleAutomations
   - group.homeassistantAutomations
-  - automation.Homeassistant_Start
-  - automation.Homeassistant_Stop
-  - automation.Homeassistant_Alive
-  - automation.Estelle_at_home
-  - automation.Estelle_leave_home
+  - group.sunAutomations
