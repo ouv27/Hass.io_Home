@@ -82,7 +82,7 @@ automation: !include_dir_merge_list automation
 zone: !include zones.yaml  
 notify: !include_dir_list Notify/ # only one entry per file
 scene: !include scenes.yaml
-input_select: !include input_selects.yaml
+# input_select: !include input_selects.yaml
   # arlo_mode:
     # name: Arlo Mode
     # options:
@@ -125,7 +125,7 @@ switch:
         name: Lumiere Cuisine1
       0A14050D00282901000000:
         name: Lumiere Cuisine2     
-      0A14050D00283001000000:
+      0b11000f00ec995601000040:
         name: Lumiere Chambre Lucas          
 cover:
   platform: rfxtrx
