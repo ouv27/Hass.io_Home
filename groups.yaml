@@ -18,7 +18,7 @@ default_view:
   - switch.lumiere_salon
   - switch.lumiere_cuisine1
   - switch.lumiere_cuisine2
-
+  - switch.lumiere_chambre_lucas
 Weather:
   name: Weather
   entities:
