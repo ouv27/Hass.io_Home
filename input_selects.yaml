@@ -10,14 +10,14 @@
   # initial: Enable
   # icon: mdi:camera
   
-switchlights_scenes:
-  name: SwitchLights Scene
-  initial: None
-  options:
-    - All On
-    - All Off
-    - None
-  icon: mdi:lightbulb-on  
+# switchlights_scenes:
+  # name: SwitchLights Scene
+  # initial: None
+  # options:
+    # - All On
+    # - All Off
+    # - None
+  # icon: mdi:lightbulb-on  
 
 # switchoffalllights_scene:
   # name: SwitchOFFAllLights Scene

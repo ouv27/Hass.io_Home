@@ -73,7 +73,8 @@ Scenes:
   view: true
   entities:
   - input_select.arlo_mode
-  - input_select.switchlights_scenes
+  - scene.switch_on_all_lights
+  - scene.switch_off_all_lights
 
 # BasicAutomations
 iphone_de_sylvainAutomations:
@@ -97,7 +98,11 @@ sunAutomations:
   entities:  
   - automation.8_SunSet
   - automation.9_SunRise
-  - automation.10_switchlights_scenes
+scenesAutomations:
+  view: false
+  entities:  
+  - automation.10_switchlights_on_scenes
+  - automation.11_switchlights_off_scenes
 BasicAutomations:
   name: Basic automations
   view: true
@@ -106,3 +111,4 @@ BasicAutomations:
   - group.iphone_de_estelleAutomations
   - group.homeassistantAutomations
   - group.sunAutomations
+  - group.scenesAutomations

@@ -1,0 +1,30 @@
+##########################
+# 10_switchlights_on_scenes #
+# SMO : en cours         #
+##########################
+- id: 10_switchlights_on_scenes
+  alias: "10 Switchlights On Scenes"
+  trigger:
+    platform: state
+    entity_id: input_select.switchlightson_scenes
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Switchlights On Scenes"
+    - service: scene.turn_on
+      entity_id: scene.switch_on_all_lights 
+##########################
+# 11_switchlights_off_scenes #
+# SMO : en cours         #
+##########################
+- id: 11_switchlights_off_scenes
+  alias: "11 Switchlights Off Scenes"
+  trigger:
+    platform: state
+    entity_id: input_select.switchlightsoff_scenes
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Switchlights Off Scenes"
+    - service: scene.turn_on
+      entity_id: scene.switch_off_all_lights 
