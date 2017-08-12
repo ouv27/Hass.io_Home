@@ -1,20 +1,15 @@
-#########################
-## switch_on_all_lights #
-# SMO : en cours        #
-#########################
-  - name: switch_on_all_lights
-    entities:
-      switch.lumiere_chambre: on
-      switch.lumiere_cuisine1: on
-      switch.lumiere_cuisine2: on
-      switch.lumiere_salon: on
-#########################
-## switch_off_all_lights #
-# SMO : en cours        #
-#########################
-  - name: switch_off_all_lights
-    entities:
-      switch.lumiere_chambre: off
-      switch.lumiere_cuisine1: off
-      switch.lumiere_cuisine2: off
-      switch.lumiere_salon: off
+##########################
+# 10_switchlights_scenes #
+# SMO : en cours         #
+##########################
+- id: 10_switchlights_scenes
+  alias: "10 Switchlights Scenes"
+  trigger:
+    platform: state
+    entity_id: input_select.switchlights_scenes
+  action:
+    - service: notify.slack_ouv_homeassistant
+      data:
+        message: "{{now().strftime(\"%Y-%m-%d %H:%M:%S\") }} : Notification : Switchlights Scenes : {{states.input_select.switchlights_scenes.state}}"
+    - service: scene.turn_on
+      entity_id: scene.switch_on_all_lights 
