@@ -68,16 +68,12 @@ LocalMachine:
   - sensor.cpu_use
   - sensor.ram_use
   - sensor.disk_use_c
-Tests:
-  name: Tests
+Scenes:
+  name: Scenes
   view: true
   entities:
-  - input_select.threat
-  - input_select.who_cooks
-  - input_select.living_room_preset
-  - input_boolean.notify_home
-  - input_slider.bedroom_brightness
   - input_select.arlo_mode
+  - input_select.switchlights_scenes
 
 # BasicAutomations
 iphone_de_sylvainAutomations:
@@ -101,6 +97,7 @@ sunAutomations:
   entities:  
   - automation.8_SunSet
   - automation.9_SunRise
+  - automation.10_switchlights_scenes
 BasicAutomations:
   name: Basic automations
   view: true

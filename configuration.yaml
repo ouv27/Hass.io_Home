@@ -80,12 +80,22 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation
 #device_tracker: !include device_tracker.yaml 
 zone: !include zones.yaml  
-
+notify: !include_dir_list Notify/ # only one entry per file
+scene: !include scenes.yaml
+input_select: !include input_selects.yaml
+  # arlo_mode:
+    # name: Arlo Mode
+    # options:
+     # - Enable
+     # - Disable
+    # initial: Enable
+    # icon: mdi:camera
 ffmpeg:
   
 arlo:
   username: !secret arlo_username
   password: !secret arlo_password
+  
 sensor 2:
   - platform: arlo
     monitored_conditions:
@@ -114,7 +124,9 @@ switch:
       0A14050D00282801010000:
         name: Lumiere Cuisine1
       0A14050D00282901000000:
-        name: Lumiere Cuisine2      
+        name: Lumiere Cuisine2     
+      0A14050D00283001000000:
+        name: Lumiere Chambre Lucas          
 cover:
   platform: rfxtrx
   automatic_add: True
@@ -134,14 +146,7 @@ cover:
       name: Prise SAM      
       
       
-input_select:
-  arlo_mode:
-    name: Arlo Mode
-    options:
-     - Enable
-     - Disable
-    initial: Enable
-    icon: mdi:camera
+
  
-notify: !include_dir_list Notify/
+
     

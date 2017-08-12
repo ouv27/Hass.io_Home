@@ -1,0 +1,25 @@
+##########################
+# Switch ON all lights     #
+# SMO : en cours           #
+##########################
+# arlo_mode:
+  # name: Arlo Mode
+  # options:
+    # - Enable
+    # - Disable
+  # initial: Enable
+  # icon: mdi:camera
+  
+switchlights_scenes:
+  name: SwitchLights Scene
+  initial: None
+  options:
+    - All On
+    - All Off
+    - None
+  icon: mdi:lightbulb-on  
+
+# switchoffalllights_scene:
+  # name: SwitchOFFAllLights Scene
+  # initial: off
+  # icon: mdi:lightbulb-off
